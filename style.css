@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4d06f; // #FFDFD3; // #DAB1DA; // #ADD8E6; // #FFB870; // #FFE4C4;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 750;
+    font-size: 30px;
+  }
+
+  .ring {
+    position: relative;
+    width: 480px;
+    height: 480px;
+  }
+
+  .cell {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #4cafef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+    transition: transform 0.25s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+
+  .dragging {
+    transition: none;
+    z-index: 10;
+    cursor: grabbing;
+  }
+
+  .correct {
+    background: #03C04A; // #03AC13; // #55BF53; // #68C965 ; // #66C764; // #4cb04a; //#5def4c;
+  }
+  .warm {
+    background: #A47DAB; // #986868; 
+  }
+
+  .confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    pointer-events: none;
+ //   animation: fall linear forwards;
+ //   animation: pop 2s ease-out forwards; 
+    animation: confetti-burst linear forwards;
+  }
+
+  @keyframes confetti-burst {
+    from {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 1;
+    }
+    to {
+      transform: translate(var(--x), var(--y)) rotate(360deg);
+      opacity: 0;
+    }
+  }
