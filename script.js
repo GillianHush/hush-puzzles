@@ -1,6 +1,6 @@
 const ring = document.getElementById("ring");
 const RADIUS = 160;
-const CENTER = 190;
+const CENTER = 240;
 const ANSWER = "ORGANKLEASHOUTTERR".split("");
 const AVAILABLE_LETTERS = ANSWER; 
 const WORD1 = "ORGAN";
